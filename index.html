@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cyntia Almeida – Advogada especialista em Planejamento Previdenciário. Orientação, acolhimento e segurança para o seu futuro." />
-  <title>Cyntia Almeida | Planejamento Previdenciário</title>
-
-  <!-- Fonts -->
+  <meta name="description" content="Dr.ª Cyntia Almeida — OAB/MG 244.755. Planejamento Previdenciário e Benefícios do INSS. Desde 2014, orientação para decisões mais conscientes sobre o futuro previdenciário." />
+  <title>Dr.ª Cyntia Almeida | Planejamento Previdenciário e Benefícios do INSS</title>
+  <link rel="icon" href="public/logo-icone.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── Reset & Base ─── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:      #0c0c0c;
-      --dark:       #141414;
-      --dark-2:     #1c1c1c;
-      --dark-3:     #252525;
-      --border:     #2e2e2e;
-      --gold:       #c9a96e;
+      --black: #0c0c0c;
+      --dark: #141414;
+      --dark-2: #1c1c1c;
+      --dark-3: #252525;
+      --border: #2e2e2e;
+      --gold: #c9a96e;
       --gold-light: #e2c993;
-      --gold-dark:  #9a7340;
-      --white:      #f5f5f5;
-      --gray:       #a0a0a0;
+      --gold-dark: #9a7340;
+      --white: #f5f5f5;
+      --gray: #a0a0a0;
       --gray-light: #d0d0d0;
       --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans:  'Jost', system-ui, sans-serif;
-      --ease:       cubic-bezier(0.4, 0, 0.2, 1);
-      --radius:     2px;
+      --font-sans: 'Jost', system-ui, sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --radius: 2px;
+      --wa: https://api.whatsapp.com/send/?phone=5531988648482;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--black);
+      background: var(--black);
       color: var(--white);
       font-family: var(--font-sans);
       font-weight: 300;
@@ -44,21 +43,21 @@
       overflow-x: hidden;
     }
 
-    /* ─── Scrollbar ─── */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 10px; }
-
-    /* ─── Selection ─── */
     ::selection { background: var(--gold-dark); color: var(--white); }
 
-    /* ─── Utility ─── */
-    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .gold { color: var(--gold); }
-    .italic { font-style: italic; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
+
+    .grad-text {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
     .section-label {
-      font-family: var(--font-sans);
       font-size: 0.65rem;
       font-weight: 500;
       letter-spacing: 0.25em;
@@ -71,19 +70,16 @@
     }
     .section-label::before {
       content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
+      width: 32px; height: 1px;
       background: var(--gold);
       flex-shrink: 0;
     }
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 4vw, 3.1rem);
       font-weight: 400;
       line-height: 1.2;
-      color: var(--white);
     }
 
     .section-desc {
@@ -94,23 +90,6 @@
       line-height: 1.8;
     }
 
-    /* ─── Gold Gradient Text ─── */
-    .grad-text {
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--gold-dark) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* ─── Divider ─── */
-    .divider {
-      width: 48px;
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin: 1.5rem 0;
-    }
-
-    /* ─── Buttons ─── */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -128,7 +107,6 @@
       border-radius: var(--radius);
       white-space: nowrap;
     }
-
     .btn-gold {
       background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
       color: var(--black);
@@ -137,9 +115,7 @@
     .btn-gold:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 32px rgba(201, 169, 110, 0.4);
-      filter: brightness(1.08);
     }
-
     .btn-outline {
       background: transparent;
       color: var(--white);
@@ -151,45 +127,30 @@
       transform: translateY(-2px);
     }
 
-    /* ─── NAV ─── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 1.4rem 0;
-      transition: background 0.4s var(--ease), padding 0.4s var(--ease), box-shadow 0.4s var(--ease);
+      padding: 1.2rem 0;
+      transition: background 0.4s var(--ease), padding 0.4s var(--ease);
     }
     nav.scrolled {
       background: rgba(12, 12, 12, 0.96);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      padding: 0.9rem 0;
+      padding: 0.8rem 0;
       box-shadow: 0 1px 0 var(--border);
     }
-
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
     }
-
-    .nav-logo img {
-      height: 44px;
-      width: auto;
-      display: block;
-      filter: brightness(1.05);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-      list-style: none;
-    }
+    .nav-logo img { height: 42px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
     .nav-links a {
-      font-size: 0.75rem;
-      font-weight: 400;
+      font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gray-light);
@@ -208,8 +169,6 @@
     .nav-links a:hover { color: var(--gold); }
     .nav-links a:hover::after { width: 100%; }
 
-    .nav-cta { margin-left: 0.5rem; }
-
     .hamburger {
       display: none;
       flex-direction: column;
@@ -221,8 +180,7 @@
     }
     .hamburger span {
       display: block;
-      width: 24px;
-      height: 1.5px;
+      width: 24px; height: 1.5px;
       background: var(--white);
       transition: all 0.3s var(--ease);
     }
@@ -230,17 +188,16 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-    /* Mobile nav */
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      inset: 0;
       background: rgba(10, 10, 10, 0.98);
       z-index: 99;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2.5rem;
+      gap: 2rem;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s var(--ease);
@@ -248,32 +205,28 @@
     .mobile-nav.open { opacity: 1; pointer-events: all; }
     .mobile-nav a {
       font-family: var(--font-serif);
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 300;
       color: var(--white);
       text-decoration: none;
-      transition: color 0.2s;
     }
     .mobile-nav a:hover { color: var(--gold); }
 
-    /* ─── HERO ─── */
+    /* HERO */
     #hero {
       position: relative;
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,169,110,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 20% 70%, rgba(201,169,110,0.04) 0%, transparent 60%),
-        linear-gradient(160deg, #111111 0%, #0c0c0c 100%);
+        radial-gradient(ellipse 55% 55% at 78% 55%, rgba(201,169,110,0.08) 0%, transparent 70%),
+        linear-gradient(160deg, #111 0%, #0c0c0c 100%);
     }
-
     .hero-grid {
       position: absolute;
       inset: 0;
@@ -281,316 +234,171 @@
         linear-gradient(rgba(201,169,110,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(201,169,110,0.03) 1px, transparent 1px);
       background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
     }
 
-    .hero-content {
+    .hero-layout {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 2rem;
+      align-items: end;
       width: 100%;
-      padding-top: 6rem;
+      padding-top: 7rem;
+      min-height: 100vh;
     }
 
+    .hero-copy {
+      padding-bottom: 5.5rem;
+    }
     .hero-eyebrow {
-      font-family: var(--font-sans);
       font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-
     .hero-title {
       font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
       font-weight: 400;
-      line-height: 1.1;
-      color: var(--white);
-      margin-bottom: 1.5rem;
+      line-height: 1.08;
+      margin-bottom: 1.2rem;
     }
-
-    .hero-title em {
-      font-style: italic;
-      font-weight: 300;
-    }
-
+    .hero-title em { font-style: italic; font-weight: 300; }
     .hero-subtitle {
       font-size: 0.95rem;
       color: var(--gray);
-      max-width: 420px;
+      max-width: 460px;
       line-height: 1.9;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.2rem;
     }
-
-    .hero-actions {
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 3rem;
+      gap: 1.6rem;
+      margin-top: 2.4rem;
       font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--gray);
-      letter-spacing: 0.05em;
     }
-    .hero-badge span {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      animation: pulse 2.5s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.7); }
-    }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero-logo-wrap {
-      position: relative;
-      width: 340px;
-      height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-logo-ring {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 1px solid rgba(201, 169, 110, 0.15);
-      animation: rotate 30s linear infinite;
-    }
-    .hero-logo-ring::before {
+    .hero-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .hero-meta span::before {
       content: '';
-      position: absolute;
-      top: -3px; left: 50%;
-      transform: translateX(-50%);
       width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--gold);
     }
-    .hero-logo-ring-2 {
+
+    .hero-visual {
+      position: relative;
+      height: 100%;
+      min-height: 620px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-cutout {
       position: absolute;
-      inset: 20px;
-      border-radius: 50%;
-      border: 1px dashed rgba(201, 169, 110, 0.08);
-      animation: rotate 20s linear infinite reverse;
+      bottom: 0;
+      pointer-events: none;
+      user-select: none;
     }
-
-    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-    .hero-logo-img {
-      width: 180px;
+    .hero-cutout.main {
+      right: -4%;
+      width: min(520px, 92%);
+      z-index: 2;
+      filter: drop-shadow(-30px 10px 40px rgba(0,0,0,0.45));
+    }
+    .hero-cutout.alt {
+      left: -8%;
+      width: min(380px, 70%);
+      z-index: 1;
+      opacity: 0.88;
+      mask-image: linear-gradient(to top, black 70%, transparent 100%);
+    }
+    .hero-cutout img {
+      width: 100%;
       height: auto;
-      filter: drop-shadow(0 0 40px rgba(201, 169, 110, 0.2));
-      animation: floatY 6s ease-in-out infinite;
-    }
-    @keyframes floatY {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      display: block;
     }
 
-    .hero-stats {
+    /* STATS */
+    .stats-bar {
+      position: relative;
+      z-index: 3;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-top: 4rem;
-      overflow: hidden;
+      border-top: 1px solid var(--border);
     }
     .stat-item {
       background: var(--dark);
-      padding: 1.4rem 1.2rem;
+      padding: 1.6rem 1.2rem;
       text-align: center;
     }
     .stat-number {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
-      font-weight: 400;
+      font-size: 1.6rem;
       color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.3rem;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
     }
     .stat-label {
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      color: var(--gray);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-    }
-
-    /* ─── SOBRE ─── */
-    #sobre {
-      padding: 7rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #sobre::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
-    }
-
-    .sobre-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .sobre-image-wrap {
-      position: relative;
-    }
-
-    .sobre-frame {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      aspect-ratio: 3/4;
-      max-height: 520px;
-      overflow: hidden;
-    }
-
-    .sobre-frame img.foto-adv {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-    .sobre-frame:hover img.foto-adv {
-      transform: scale(1.03);
-    }
-
-    .sobre-frame-deco {
-      position: absolute;
-      bottom: -20px; right: -20px;
-      width: 120px; height: 120px;
-      border: 1px solid var(--gold);
-      opacity: 0.15;
-      border-radius: var(--radius);
-    }
-    .sobre-frame-deco-2 {
-      position: absolute;
-      top: -12px; left: -12px;
-      width: 60px; height: 60px;
-      border: 1px solid var(--gold);
-      opacity: 0.1;
-      border-radius: var(--radius);
-    }
-
-    .sobre-text { }
-
-    .sobre-quote {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--gray-light);
-      line-height: 1.6;
-      padding-left: 1.4rem;
-      border-left: 2px solid var(--gold);
-      margin: 2rem 0;
-    }
-
-    .sobre-body {
-      font-size: 0.92rem;
       color: var(--gray);
-      line-height: 1.9;
-    }
-    .sobre-body p + p { margin-top: 1rem; }
-
-    .sobre-credentials {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-    .credential-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      color: var(--gray-light);
-    }
-    .credential-item::before {
-      content: '';
-      display: block;
-      width: 18px; height: 1px;
-      background: var(--gold);
-      flex-shrink: 0;
     }
 
-    /* ─── SERVIÇOS ─── */
-    #servicos {
+    /* ATUAÇÃO */
+    #atuacao {
       padding: 7rem 0;
       background: var(--dark);
       position: relative;
     }
-    #servicos::before, #servicos::after {
+    #atuacao::before, #atuacao::after,
+    #processo::before, #processo::after,
+    #ebook::before, #ebook::after {
       content: '';
       position: absolute;
       left: 0; right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--border), transparent);
     }
-    #servicos::before { top: 0; }
-    #servicos::after { bottom: 0; }
+    #atuacao::before, #processo::before, #ebook::before { top: 0; }
+    #atuacao::after, #processo::after, #ebook::after { bottom: 0; }
 
-    .servicos-header {
+    .atuacao-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 4rem;
       gap: 2rem;
+      margin-bottom: 3.5rem;
       flex-wrap: wrap;
     }
 
-    .servicos-grid {
+    .atuacao-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
     }
-
-    .servico-card {
+    .atuacao-card {
       background: var(--dark-2);
-      padding: 2.5rem 2rem;
+      padding: 2.4rem 2rem;
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
-      transition: background 0.3s var(--ease);
+      gap: 1rem;
+      transition: background 0.3s;
       position: relative;
-      overflow: hidden;
     }
-    .servico-card::before {
+    .atuacao-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
@@ -600,394 +408,298 @@
       transform-origin: left;
       transition: transform 0.4s var(--ease);
     }
-    .servico-card:hover { background: var(--dark-3); }
-    .servico-card:hover::before { transform: scaleX(1); }
-
-    .servico-icon {
-      width: 44px; height: 44px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: border-color 0.3s;
-    }
-    .servico-card:hover .servico-icon { border-color: var(--gold-dark); }
-
-    .servico-icon svg {
-      width: 20px; height: 20px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .servico-title {
+    .atuacao-card:hover { background: var(--dark-3); }
+    .atuacao-card:hover::before { transform: scaleX(1); }
+    .atuacao-num {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .servico-desc {
       font-size: 0.85rem;
-      color: var(--gray);
-      line-height: 1.8;
-      flex: 1;
+      color: var(--gold-dark);
     }
-
-    .servico-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
+    .atuacao-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 400;
+    }
+    .atuacao-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.8; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+    .tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--gold);
-      text-decoration: none;
-      transition: gap 0.3s;
-    }
-    .servico-link:hover { gap: 0.8rem; }
-    .servico-link svg {
-      width: 14px; height: 14px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    /* ─── DIFERENCIAIS ─── */
-    #diferenciais {
-      padding: 7rem 0;
-    }
-
-    .diferenciais-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-      margin-top: 4rem;
-    }
-
-    .diferencial-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .diferencial-item {
-      display: grid;
-      grid-template-columns: 40px 1fr;
-      gap: 1.5rem;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-      cursor: default;
-      transition: padding-left 0.3s var(--ease);
-    }
-    .diferencial-item:first-child { border-top: 1px solid var(--border); }
-    .diferencial-item:hover { padding-left: 0.5rem; }
-
-    .diferencial-num {
-      font-family: var(--font-serif);
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--gold-dark);
-      padding-top: 0.2rem;
-      letter-spacing: 0.05em;
-    }
-
-    .diferencial-title {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
-    .diferencial-desc {
-      font-size: 0.85rem;
-      color: var(--gray);
-      line-height: 1.7;
-    }
-
-    .diferenciais-visual {
-      position: relative;
-    }
-
-    .dif-card-main {
-      background: var(--dark-2);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 3rem;
-      position: relative;
-      overflow: hidden;
+      padding: 0.3rem 0.65rem;
     }
-    .dif-card-main::before {
-      content: '';
+
+    /* SOBRE */
+    #sobre { padding: 7rem 0; }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+    .sobre-photo {
+      position: relative;
+    }
+    .sobre-photo img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      max-height: 560px;
+    }
+    .sobre-deco {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 70% 30%, rgba(201,169,110,0.06) 0%, transparent 60%);
+      width: 110px; height: 110px;
+      border: 1px solid var(--gold);
+      opacity: 0.18;
+      bottom: -16px; right: -16px;
     }
-
-    .dif-card-title {
+    .sobre-quote {
       font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--white);
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-    }
-    .dif-card-subtitle {
-      font-size: 0.85rem;
-      color: var(--gray);
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-    }
-
-    .dif-pillars {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .dif-pillar {
-      background: var(--dark-3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.2rem;
-      text-align: center;
-      transition: border-color 0.3s;
-    }
-    .dif-pillar:hover { border-color: var(--gold-dark); }
-    .dif-pillar-icon {
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .dif-pillar-icon svg {
-      width: 28px; height: 28px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .dif-pillar-label {
-      font-size: 0.75rem;
+      font-size: 1.25rem;
+      font-style: italic;
+      font-weight: 300;
       color: var(--gray-light);
-      letter-spacing: 0.05em;
+      line-height: 1.6;
+      padding-left: 1.3rem;
+      border-left: 2px solid var(--gold);
+      margin: 1.6rem 0;
     }
-
-    /* ─── PROCESSO ─── */
-    #processo {
-      padding: 7rem 0;
-      background: var(--dark);
-      position: relative;
+    .sobre-body { font-size: 0.92rem; color: var(--gray); line-height: 1.9; }
+    .sobre-body p + p { margin-top: 1rem; }
+    .cred-list { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .cred-list li {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--gray-light);
     }
-    #processo::before, #processo::after {
+    .cred-list li::before {
       content: '';
-      position: absolute;
-      left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      width: 18px; height: 1px;
+      background: var(--gold);
+      margin-top: 0.75rem;
+      flex-shrink: 0;
     }
-    #processo::before { top: 0; }
-    #processo::after { bottom: 0; }
 
-    .processo-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 4rem;
-    }
+    /* PROCESSO */
+    #processo { padding: 7rem 0; background: var(--dark); position: relative; }
+    .processo-header { text-align: center; max-width: 620px; margin: 0 auto 4rem; }
     .processo-header .section-label { justify-content: center; }
     .processo-header .section-label::before { display: none; }
-    .processo-header .section-title { margin-top: 0.5rem; }
-
     .processo-steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      position: relative;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
-    .processo-steps::before {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: calc(12.5% + 1rem);
-      right: calc(12.5% + 1rem);
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
-      opacity: 0.3;
-    }
-
-    .passo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 1.5rem;
-      position: relative;
-    }
-
+    .passo { text-align: center; padding: 0 0.8rem; }
     .passo-num {
       width: 56px; height: 56px;
+      margin: 0 auto 1.4rem;
       border: 1px solid var(--gold-dark);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-weight: 400;
+      font-size: 1.15rem;
       color: var(--gold);
       background: var(--dark);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-      transition: background 0.3s, border-color 0.3s;
     }
-    .passo:hover .passo-num {
-      background: var(--gold-dark);
-      color: var(--white);
-      border-color: var(--gold-dark);
-    }
-
-    .passo-title {
+    .passo h3 {
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 400;
-      color: var(--white);
       margin-bottom: 0.6rem;
     }
-    .passo-desc {
-      font-size: 0.82rem;
-      color: var(--gray);
-      line-height: 1.7;
-    }
+    .passo p { font-size: 0.85rem; color: var(--gray); line-height: 1.75; }
 
-    /* ─── CONTATO ─── */
-    #contato {
-      padding: 8rem 0;
+    /* SITUAÇÕES */
+    #situacoes { padding: 7rem 0; }
+    .sit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 3.5rem;
+    }
+    .sit-card {
+      background: var(--black);
+      padding: 2rem 1.7rem;
+      min-height: 210px;
+      transition: background 0.3s;
+    }
+    .sit-card:hover { background: var(--dark-2); }
+    .sit-card .num {
+      font-family: var(--font-serif);
+      font-size: 0.8rem;
+      color: var(--gold-dark);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .sit-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0.7rem;
+      line-height: 1.35;
+    }
+    .sit-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.75; }
+
+    /* EBOOK */
+    #ebook { padding: 7rem 0; background: var(--dark); position: relative; }
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .ebook-cover {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      padding: 3rem 2.4rem;
       position: relative;
       overflow: hidden;
     }
+    .ebook-cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(201,169,110,0.08), transparent 55%);
+    }
+    .ebook-cover-inner { position: relative; }
+    .ebook-cover h3 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.25;
+      margin: 0.8rem 0 1rem;
+    }
+    .ebook-parts { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 2rem; }
+    .ebook-part {
+      font-size: 0.78rem;
+      color: var(--gray-light);
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+    }
+    .ebook-part strong {
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      min-width: 58px;
+    }
+    .ebook-list { margin: 1.6rem 0 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .ebook-list li {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--gray-light);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .ebook-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.7rem;
+      width: 8px; height: 1px;
+      background: var(--gold);
+    }
+    .ebook-note { font-size: 0.78rem; color: var(--gray); margin-top: 1.2rem; }
+
+    /* FAQ */
+    #faq { padding: 7rem 0; }
+    .faq-list { margin-top: 3rem; border-top: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.4rem 0;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      color: var(--gold);
+      font-size: 1.4rem;
+      font-family: var(--font-sans);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '–'; }
+    .faq-item p {
+      padding: 0 0 1.5rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 760px;
+      line-height: 1.85;
+    }
+
+    /* CONTATO */
+    #contato { padding: 7.5rem 0 8rem; position: relative; }
     #contato::before {
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 50% 60% at 50% 50%, rgba(201,169,110,0.05) 0%, transparent 70%);
+      background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(201,169,110,0.05), transparent 70%);
     }
-
     .contato-wrap {
       position: relative;
       z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
-      align-items: start;
     }
-
-    .contato-info { }
-
-    .contato-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .contato-sub {
-      font-size: 0.9rem;
-      color: var(--gray);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-      max-width: 400px;
-    }
-
-    .contato-canais {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .canal-item {
+    .contato-sub { font-size: 0.92rem; color: var(--gray); line-height: 1.85; margin: 1rem 0 2.2rem; max-width: 420px; }
+    .canais { display: flex; flex-direction: column; gap: 0.85rem; }
+    .canal {
       display: flex;
       align-items: center;
       gap: 1rem;
       padding: 1rem 1.2rem;
       background: var(--dark-2);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       text-decoration: none;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .canal-item:hover {
-      border-color: var(--gold-dark);
-      transform: translateX(4px);
-    }
+    .canal:hover { border-color: var(--gold-dark); transform: translateX(4px); }
     .canal-icon {
       width: 36px; height: 36px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .canal-icon svg {
-      width: 18px; height: 18px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-    }
-    .canal-label {
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray);
-      display: block;
-      margin-bottom: 0.1rem;
-    }
-    .canal-value {
-      font-size: 0.9rem;
-      color: var(--white);
-    }
+    .canal-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .canal-label { display: block; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); }
+    .canal-value { font-size: 0.9rem; color: var(--white); }
 
-    /* ─── Form ─── */
     .contato-form {
       background: var(--dark-2);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2.5rem;
+      padding: 2.4rem;
     }
-
-    .form-title {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
-    .form-subtitle {
-      font-size: 0.82rem;
-      color: var(--gray);
-      margin-bottom: 2rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
+    .form-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 0.35rem; }
+    .form-subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1.8rem; }
+    .form-group { margin-bottom: 1.1rem; }
     .form-group label {
       display: block;
-      font-size: 0.7rem;
-      font-weight: 500;
+      font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gray);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
     }
     .form-group input,
     .form-group select,
@@ -995,15 +707,12 @@
       width: 100%;
       background: var(--dark-3);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 0.75rem 1rem;
       font-family: var(--font-sans);
       font-size: 0.9rem;
       font-weight: 300;
       color: var(--white);
       outline: none;
-      transition: border-color 0.3s;
-      -webkit-appearance: none;
       appearance: none;
     }
     .form-group select {
@@ -1018,24 +727,11 @@
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus { border-color: var(--gold-dark); }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--gray); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; justify-content: center; margin-top: 0.4rem; }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-submit { width: 100%; margin-top: 0.5rem; justify-content: center; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--black);
-      border-top: 1px solid var(--border);
-      padding: 3rem 0 2rem;
-    }
-
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 3rem 0 2rem; }
     .footer-inner {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -1043,28 +739,18 @@
       align-items: center;
       padding-bottom: 2rem;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-
     .footer-logo img { height: 36px; }
-
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
+    .footer-links { display: flex; gap: 1.8rem; list-style: none; flex-wrap: wrap; }
     .footer-links a {
-      font-size: 0.75rem;
-      font-weight: 400;
+      font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--gray);
       text-decoration: none;
-      transition: color 0.25s;
     }
     .footer-links a:hover { color: var(--gold); }
-
     .footer-bottom {
       display: flex;
       justify-content: space-between;
@@ -1072,72 +758,23 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--gray);
-    }
-    .footer-copy a {
-      color: var(--gold-dark);
-      text-decoration: none;
-    }
-
-    .footer-oab {
-      font-size: 0.72rem;
-      color: var(--gray);
-      letter-spacing: 0.05em;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
+    .footer-copy, .footer-oab { font-size: 0.75rem; color: var(--gray); }
+    .footer-social { display: flex; gap: 0.7rem; }
     .footer-social a {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--gray);
-      text-decoration: none;
-      transition: border-color 0.3s, color 0.3s, transform 0.3s;
+      transition: border-color 0.3s, color 0.3s;
     }
-    .footer-social a:hover {
-      border-color: var(--gold-dark);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-    .footer-social svg {
-      width: 16px; height: 16px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+    .footer-social a:hover { border-color: var(--gold-dark); color: var(--gold); }
+    .footer-social svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
-    /* ─── Scroll reveal ─── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* ─── WhatsApp FAB ─── */
     .whatsapp-fab {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
+      bottom: 2rem; right: 2rem;
       z-index: 200;
       width: 52px; height: 52px;
       background: #25D366;
@@ -1147,524 +784,405 @@
       justify-content: center;
       box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
       text-decoration: none;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+      transition: transform 0.3s;
     }
-    .whatsapp-fab:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
-    }
-    .whatsapp-fab svg {
-      width: 26px; height: 26px;
-      fill: white;
-    }
+    .whatsapp-fab:hover { transform: scale(1.08); }
+    .whatsapp-fab svg { width: 26px; height: 26px; fill: #fff; }
 
-    /* ─── RESPONSIVE ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
     @media (max-width: 960px) {
-      .hero-content { grid-template-columns: 1fr; gap: 3rem; padding-top: 8rem; }
-      .hero-visual { display: none; }
-      .hero-stats { margin-top: 2.5rem; }
-      .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .sobre-image-wrap { display: none; }
-      .servicos-grid { grid-template-columns: 1fr 1fr; }
-      .diferenciais-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .processo-steps { grid-template-columns: 1fr 1fr; gap: 3rem; }
-      .processo-steps::before { display: none; }
-      .contato-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .hero-layout { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { padding-bottom: 2rem; padding-top: 7rem; }
+      .hero-visual { min-height: 480px; }
+      .hero-cutout.alt { display: none; }
+      .hero-cutout.main { right: 50%; transform: translateX(50%); width: min(420px, 80%); }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .atuacao-grid, .sit-grid { grid-template-columns: 1fr; }
+      .sobre-grid, .ebook-grid, .contato-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+      .processo-steps { grid-template-columns: 1fr; gap: 2.2rem; }
+      .footer-inner { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 640px) {
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .mobile-nav { display: flex; }
-      .servicos-grid { grid-template-columns: 1fr; }
-      .processo-steps { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .stat-item:last-child { grid-column: span 2; }
       .form-row { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
-      .dif-pillars { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav id="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">
-        <img src="public/logo-completa.png" alt="Cyntia Almeida" />
+        <img src="public/logo-completa.png" alt="Cyntia Almeida Advocacia e Consultoria Jurídica" />
       </a>
       <ul class="nav-links">
+        <li><a href="#atuacao">Atuação</a></li>
         <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#processo">Como Funciona</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#ebook">eBook</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <a href="#contato" class="btn btn-gold nav-cta">Agendar Consulta</a>
+      <a href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0" class="btn btn-gold nav-cta" target="_blank" rel="noopener">WhatsApp</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
+    <a href="#atuacao" class="mobile-link">Atuação</a>
     <a href="#sobre" class="mobile-link">Sobre</a>
-    <a href="#servicos" class="mobile-link">Serviços</a>
-    <a href="#processo" class="mobile-link">Como Funciona</a>
+    <a href="#processo" class="mobile-link">Como funciona</a>
+    <a href="#situacoes" class="mobile-link">Situações</a>
+    <a href="#ebook" class="mobile-link">eBook</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
     <a href="#contato" class="mobile-link">Contato</a>
-    <a href="#contato" class="btn btn-gold" style="margin-top:1rem">Agendar Consulta</a>
+    <a href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-left">
-          <p class="hero-eyebrow">Advocacia Previdenciária</p>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Advogada previdenciarista · OAB/MG 244.755</p>
           <h1 class="hero-title">
-            Construindo seu<br />
-            <em class="grad-text">futuro tranquilo,</em><br />
-            no Brasil e<br />
-            no exterior.
+            Dr.ª Cyntia Almeida<br />
+            <em class="grad-text">Planejamento previdenciário</em><br />
+            e benefícios do INSS.
           </h1>
           <p class="hero-subtitle">
-            Orientação jurídica especializada para garantir que você receba os benefícios que merece.
-            Acolhimento, segurança e clareza em cada etapa do processo.
+            Desde 2014, auxilio pessoas a compreenderem seus direitos e a tomarem decisões mais conscientes sobre o futuro previdenciário — no Brasil e no exterior.
           </p>
           <div class="hero-actions">
-            <a href="#contato" class="btn btn-gold">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              Consulta Gratuita
-            </a>
-            <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+            <a class="btn btn-gold" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0">Falar no WhatsApp</a>
+            <a class="btn btn-outline" href="#ebook">Conhecer o eBook</a>
           </div>
-          <div class="hero-badge">
-            <span></span>
-            Atendimento online em todo o Brasil
+          <div class="hero-meta">
+            <span>Sigilo profissional</span>
+            <span>Análise do CNIS</span>
+            <span>Atendimento no Brasil e no exterior</span>
           </div>
         </div>
-
-        <div class="hero-visual">
-          <div class="hero-logo-wrap">
-            <div class="hero-logo-ring"></div>
-            <div class="hero-logo-ring-2"></div>
-            <img src="public/logo-icone.png" alt="CA" class="hero-logo-img" />
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-cutout alt">
+            <img src="public/hero-vazada2.png" alt="" />
           </div>
-        </div>
-      </div>
-
-      <div class="hero-stats reveal">
-        <div class="stat-item">
-          <div class="stat-number grad-text">12</div>
-          <div class="stat-label">Anos de experiência</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number grad-text">500+</div>
-          <div class="stat-label">Clientes atendidos</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number grad-text">98%</div>
-          <div class="stat-label">Casos resolvidos</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre">
-    <div class="container">
-      <div class="sobre-grid">
-        <div class="sobre-image-wrap">
-          <div class="sobre-frame">
-            <img src="public/foto01.PNG" alt="Cyntia Almeida – Advogada Previdenciária" class="foto-adv" />
-          </div>
-          <div class="sobre-frame-deco"></div>
-          <div class="sobre-frame-deco-2"></div>
-        </div>
-
-        <div class="sobre-text reveal">
-          <p class="section-label">Sobre mim</p>
-          <h2 class="section-title">
-            Cyntia Almeida,<br />
-            <em class="grad-text italic">sua advogada previdenciarista</em>
-          </h2>
-
-          <blockquote class="sobre-quote">
-            "Acredito que cada pessoa merece receber os benefícios que conquistou ao longo de toda uma vida de trabalho."
-          </blockquote>
-
-          <div class="sobre-body">
-            <p>
-              Especialista em Direito Previdenciário, atuo com dedicação integral
-              para que meus clientes conquistem seus direitos junto ao INSS com
-              clareza, segurança e agilidade.
-            </p>
-            <p>
-              Minha abordagem une rigor técnico e escuta ativa — porque entender
-              a história de cada pessoa é fundamental para construir a melhor
-              estratégia jurídica, personalizada e eficaz.
-            </p>
-          </div>
-
-          <div class="sobre-credentials reveal reveal-delay-1">
-            <div class="credential-item">Especialista em Direito Previdenciário</div>
-            <div class="credential-item">12 anos de experiência a seu serviço</div>
-            <div class="credential-item">Atuação no Brasil e no exterior</div>
-            <div class="credential-item">OAB regularmente inscrita</div>
-            <div class="credential-item">Voluntária em causas previdenciárias</div>
-          </div>
-
-          <div style="margin-top: 2.5rem;">
-            <a href="#contato" class="btn btn-gold">Fale comigo</a>
+          <div class="hero-cutout main">
+            <img src="public/hero-vazada.png" alt="Dr.ª Cyntia Almeida" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos">
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">2014</div>
+      <div class="stat-label">Atuação previdenciária</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">12 anos</div>
+      <div class="stat-label">A seu serviço</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">10 anos</div>
+      <div class="stat-label">Departamento Pessoal</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">OAB/MG</div>
+      <div class="stat-label">nº 244.755</div>
+    </div>
+  </div>
+
+  <section id="atuacao">
     <div class="container">
-      <div class="servicos-header">
+      <div class="atuacao-header reveal">
         <div>
           <p class="section-label">Áreas de atuação</p>
-          <h2 class="section-title">Serviços especializados<br /><em class="grad-text italic">em previdência social</em></h2>
+          <h2 class="section-title">Informação, organização<br /><em class="grad-text" style="font-style:italic">e planejamento</em></h2>
         </div>
-        <p class="section-desc" style="margin-top:0; text-align:right; max-width:300px;">
-          Cada caso é único. Analiso sua situação individual para encontrar a melhor solução jurídica.
+        <p class="section-desc" style="margin-top:0; max-width:340px;">
+          Uma aposentadoria não deve começar a ser pensada somente no momento de fazer o pedido ao INSS.
         </p>
       </div>
 
-      <div class="servicos-grid">
-
-        <div class="servico-card reveal">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="atuacao-grid">
+        <article class="atuacao-card reveal">
+          <span class="atuacao-num">01</span>
+          <h3>Planejamento Previdenciário</h3>
+          <p>Estratégia antes do pedido. Análise do momento certo de se aposentar, regras aplicáveis e impacto das contribuições no valor do benefício.</p>
+          <div class="tags">
+            <span class="tag">Regras de transição</span>
+            <span class="tag">Simulações</span>
+            <span class="tag">Estratégia</span>
           </div>
-          <h3 class="servico-title">Aposentadoria por Tempo de Contribuição</h3>
-          <p class="servico-desc">
-            Análise do tempo de contribuição, reconhecimento de períodos especiais e planejamento estratégico para antecipar sua aposentadoria.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="servico-card reveal reveal-delay-1">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </article>
+        <article class="atuacao-card reveal">
+          <span class="atuacao-num">02</span>
+          <h3>Benefícios do INSS</h3>
+          <p>Orientação a segurados na busca pelo benefício mais adequado à sua situação — com clareza sobre direitos, documentos e caminhos possíveis.</p>
+          <div class="tags">
+            <span class="tag">Aposentadorias</span>
+            <span class="tag">Auxílios</span>
+            <span class="tag">Revisões</span>
           </div>
-          <h3 class="servico-title">Aposentadoria por Invalidez</h3>
-          <p class="servico-desc">
-            Suporte completo para quem teve a capacidade laborativa reduzida ou cessada, com análise detalhada da perícia médica do INSS.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="servico-card reveal reveal-delay-2">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        </article>
+        <article class="atuacao-card reveal">
+          <span class="atuacao-num">03</span>
+          <h3>Análise do histórico</h3>
+          <p>Leitura do CNIS e da documentação trabalhista para identificar inconsistências, vínculos e contribuições que podem alterar o resultado do benefício.</p>
+          <div class="tags">
+            <span class="tag">CNIS</span>
+            <span class="tag">Vínculos</span>
+            <span class="tag">Contribuições</span>
           </div>
-          <h3 class="servico-title">Pensão por Morte</h3>
-          <p class="servico-desc">
-            Orientação e representação para dependentes do segurado falecido, garantindo a concessão do benefício de forma rápida e segura.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="servico-card reveal">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3 class="servico-title">Auxílio por Incapacidade</h3>
-          <p class="servico-desc">
-            Análise e acompanhamento de pedidos de auxílio-doença e auxílio-acidente, incluindo recursos e mandados judiciais quando necessário.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="servico-card reveal reveal-delay-1">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <h3 class="servico-title">Revisão de Benefícios</h3>
-          <p class="servico-desc">
-            Auditoria completa do seu benefício vigente para identificar erros de cálculo, reajustes não aplicados e valores que devem ser corrigidos retroativamente.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="servico-card reveal reveal-delay-2">
-          <div class="servico-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3 class="servico-title">Planejamento Previdenciário</h3>
-          <p class="servico-desc">
-            Estratégia preventiva para otimizar suas contribuições ao INSS e garantir a melhor aposentadoria possível dentro do atual marco legal.
-          </p>
-          <a href="#contato" class="servico-link">
-            Saiba mais
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- DIFERENCIAIS -->
-  <section id="diferenciais">
+  <section id="sobre">
     <div class="container">
-      <div style="max-width: 520px; margin-bottom: 4rem;" class="reveal">
-        <p class="section-label">Por que me escolher</p>
-        <h2 class="section-title">O que faz a diferença<br /><em class="grad-text italic">no meu atendimento</em></h2>
-      </div>
-
-      <div class="diferenciais-grid">
-        <div class="diferencial-list">
-
-          <div class="diferencial-item reveal">
-            <span class="diferencial-num">01</span>
-            <div>
-              <h3 class="diferencial-title">Escuta e Acolhimento</h3>
-              <p class="diferencial-desc">Cada cliente tem uma história única. Ouço com atenção antes de qualquer estratégia, porque entender sua realidade é o primeiro passo para defender seus direitos.</p>
-            </div>
-          </div>
-
-          <div class="diferencial-item reveal reveal-delay-1">
-            <span class="diferencial-num">02</span>
-            <div>
-              <h3 class="diferencial-title">Clareza na Orientação</h3>
-              <p class="diferencial-desc">Explico cada etapa do processo em linguagem acessível. Você sempre saberá o que está acontecendo com o seu caso, sem surpresas ou dúvidas.</p>
-            </div>
-          </div>
-
-          <div class="diferencial-item reveal reveal-delay-2">
-            <span class="diferencial-num">03</span>
-            <div>
-              <h3 class="diferencial-title">Atuação Especializada</h3>
-              <p class="diferencial-desc">Dedico minha prática integralmente ao Direito Previdenciário. Especialização significa profundidade — e profundidade significa melhores resultados para você.</p>
-            </div>
-          </div>
-
-          <div class="diferencial-item reveal reveal-delay-3">
-            <span class="diferencial-num">04</span>
-            <div>
-              <h3 class="diferencial-title">Atendimento 100% Digital</h3>
-              <p class="diferencial-desc">Atendo clientes de todo o Brasil de forma online, sem que você precise sair de casa. Praticidade sem abrir mão da qualidade e da atenção personalizada.</p>
-            </div>
-          </div>
-
+      <div class="sobre-grid">
+        <div class="sobre-photo reveal">
+          <img src="public/sobre.jpeg" alt="Dr.ª Cyntia Oliveira de Almeida Souza Faria" />
+          <div class="sobre-deco"></div>
         </div>
-
-        <div class="diferenciais-visual reveal reveal-delay-1">
-          <div class="dif-card-main">
-            <h3 class="dif-card-title">Seu futuro merece<br /><span class="grad-text">atenção especializada</span></h3>
-            <p class="dif-card-subtitle">Trabalhei uma vida inteira. Agora é hora de garantir que seus direitos sejam integralmente respeitados.</p>
-            <div class="dif-pillars">
-              <div class="dif-pillar">
-                <div class="dif-pillar-icon">
-                  <!-- Balança da justiça -->
-                  <svg viewBox="0 0 24 24"><path d="M12 3v18M3 6l9-3 9 3M5 10l-2 5h4L5 10zM19 10l-2 5h4l-2-5zM3 21h18"/></svg>
-                </div>
-                <div class="dif-pillar-label">Rigor Jurídico</div>
-              </div>
-              <div class="dif-pillar">
-                <div class="dif-pillar-icon">
-                  <!-- Mãos abertas / acolhimento -->
-                  <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10V5a2 2 0 0 0-4 0v9m0 0v1a6 6 0 0 0 12 0v-5a2 2 0 0 0-4 0"/></svg>
-                </div>
-                <div class="dif-pillar-label">Acolhimento</div>
-              </div>
-              <div class="dif-pillar">
-                <div class="dif-pillar-icon">
-                  <!-- Gráfico ascendente / resultados -->
-                  <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                </div>
-                <div class="dif-pillar-label">Resultados</div>
-              </div>
-              <div class="dif-pillar">
-                <div class="dif-pillar-icon">
-                  <!-- Escudo / confiança -->
-                  <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                </div>
-                <div class="dif-pillar-label">Confiança</div>
-              </div>
-            </div>
+        <div class="reveal">
+          <p class="section-label">Sobre</p>
+          <h2 class="section-title">Dr.ª Cyntia Oliveira<br />de Almeida Souza Faria<br /><em class="grad-text" style="font-style:italic; font-size:0.7em">Advogada — OAB/MG 244.755</em></h2>
+          <blockquote class="sobre-quote">
+            “Construindo seu futuro tranquilo, no Brasil e no exterior.”
+          </blockquote>
+          <div class="sobre-body">
+            <p>Pós-graduada em Direito Previdenciário e Processo Previdenciário, com formação também nas áreas de Compliance, Proteção de Dados (DPO) e Perícia Trabalhista.</p>
+            <p>Antes de direcionar sua atuação para a área previdenciária, acumulou <strong style="color:var(--gray-light);font-weight:400">10 anos de experiência em Departamento Pessoal</strong>, vivenciando na prática questões relacionadas a vínculos de trabalho, remunerações, contribuições previdenciárias e documentação trabalhista.</p>
+            <p>Atua com Planejamento Previdenciário e Benefícios do INSS, auxiliando segurados na análise de seu histórico contributivo, na identificação de inconsistências e na busca pela estratégia previdenciária mais adequada para cada situação.</p>
+          </div>
+          <ul class="cred-list">
+            <li>Pós-graduação em Direito Previdenciário e Processo Previdenciário</li>
+            <li>Compliance, DPO e Perícia Trabalhista</li>
+            <li>10 anos em Departamento Pessoal — leitura prática de vínculos, folha e contribuições</li>
+            <li>Voluntária em causas previdenciárias</li>
+          </ul>
+          <div style="margin-top:2.2rem">
+            <a class="btn btn-gold" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0">Falar com a Dra. Cyntia</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESSO -->
   <section id="processo">
     <div class="container">
       <div class="processo-header reveal">
         <p class="section-label">Como funciona</p>
-        <h2 class="section-title">Da consulta à conquista<br /><em class="grad-text italic">do seu benefício</em></h2>
-        <p class="section-desc" style="text-align:center; margin: 1rem auto 0;">
-          Um processo simples, transparente e focado em você.
-        </p>
+        <h2 class="section-title">Do primeiro contato<br /><em class="grad-text" style="font-style:italic">à estratégia previdenciária</em></h2>
+        <p class="section-desc" style="margin:1rem auto 0; text-align:center;">Um caminho claro para entender o histórico, corrigir o que for necessário e decidir com segurança.</p>
       </div>
-
       <div class="processo-steps">
-
         <div class="passo reveal">
           <div class="passo-num">01</div>
-          <h3 class="passo-title">Consulta inicial</h3>
-          <p class="passo-desc">Analisamos seu histórico previdenciário de forma completa, sem compromisso, para entender seu caso.</p>
+          <h3>Contato inicial</h3>
+          <p>Envie sua dúvida pelo WhatsApp. O primeiro passo é compreender o momento em que você está — perto da aposentadoria, com um benefício em análise ou apenas organizando o futuro.</p>
         </div>
-
-        <div class="passo reveal reveal-delay-1">
+        <div class="passo reveal">
           <div class="passo-num">02</div>
-          <h3 class="passo-title">Diagnóstico</h3>
-          <p class="passo-desc">Identificamos todos os seus direitos, benefícios aplicáveis e a melhor estratégia jurídica para o seu perfil.</p>
+          <h3>Análise do histórico</h3>
+          <p>Leitura do CNIS, vínculos e contribuições para identificar inconsistências e o que realmente conta para o benefício.</p>
         </div>
-
-        <div class="passo reveal reveal-delay-2">
+        <div class="passo reveal">
           <div class="passo-num">03</div>
-          <h3 class="passo-title">Acompanhamento</h3>
-          <p class="passo-desc">Cuidamos de toda a documentação e representação junto ao INSS ou Judiciário, mantendo você informado.</p>
+          <h3>Estratégia adequada</h3>
+          <p>Orientação objetiva sobre o caminho mais adequado à sua situação — com informação para decidir, e não apenas para protocolar um pedido.</p>
         </div>
-
-        <div class="passo reveal reveal-delay-3">
-          <div class="passo-num">04</div>
-          <h3 class="passo-title">Conquista</h3>
-          <p class="passo-desc">Você recebe seu benefício com a segurança de saber que cada detalhe foi cuidado por um especialista.</p>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
+  <section id="situacoes">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Situações frequentes</p>
+        <h2 class="section-title">Quando o planejamento<br /><em class="grad-text" style="font-style:italic">faz diferença</em></h2>
+        <p class="section-desc">Se alguma dessas situações é a sua, vale conversar antes de protocolar o pedido no INSS.</p>
+      </div>
+      <div class="sit-grid">
+        <article class="sit-card reveal">
+          <span class="num">01</span>
+          <h3>Vou me aposentar e não sei por qual regra</h3>
+          <p>Análise das regras vigentes e de transição para escolher o caminho com melhor equilíbrio entre tempo e valor.</p>
+        </article>
+        <article class="sit-card reveal">
+          <span class="num">02</span>
+          <h3>O CNIS está incompleto ou divergente</h3>
+          <p>Identificação de vínculos, remunerações e contribuições que não aparecem corretamente no extrato.</p>
+        </article>
+        <article class="sit-card reveal">
+          <span class="num">03</span>
+          <h3>Quero revisar um benefício já concedido</h3>
+          <p>Avaliação se há inconsistências no cálculo ou no histórico que justifiquem uma revisão.</p>
+        </article>
+        <article class="sit-card reveal">
+          <span class="num">04</span>
+          <h3>Tenho períodos de trabalho sem registro claro</h3>
+          <p>Leitura da documentação trabalhista para reunir provas e organizar o que pode ser reconhecido.</p>
+        </article>
+        <article class="sit-card reveal">
+          <span class="num">05</span>
+          <h3>O INSS indeferiu ou pediu documentos</h3>
+          <p>Orientação sobre o que responder, o que complementar e como conduzir o pedido com mais segurança.</p>
+        </article>
+        <article class="sit-card reveal">
+          <span class="num">06</span>
+          <h3>Ainda estou longe, mas quero me organizar</h3>
+          <p>Planejamento antecipado: o que contribuir, o que corrigir e o que acompanhar ao longo dos anos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ebook">
+    <div class="container">
+      <div class="ebook-grid">
+        <div class="ebook-cover reveal">
+          <div class="ebook-cover-inner">
+            <p class="section-label">eBook</p>
+            <h3>Será que eu vou<br /><span class="grad-text">me aposentar?</span></h3>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Um guia prático para entender sua aposentadoria no INSS — sem juridiquês.</p>
+            <div class="ebook-parts">
+              <div class="ebook-part"><strong>Parte 1</strong> Entendendo a aposentadoria</div>
+              <div class="ebook-part"><strong>Parte 2</strong> Seu histórico no INSS</div>
+              <div class="ebook-part"><strong>Parte 3</strong> Contribuições e situações de atenção</div>
+              <div class="ebook-part"><strong>Parte 4</strong> Planejar antes de pedir</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="section-label">Material prático</p>
+          <h2 class="section-title">Informação simples,<br />preventiva e <em class="grad-text" style="font-style:italic">acessível</em></h2>
+          <p class="section-desc">Muita gente contribui para o INSS durante anos sem saber como isso vai refletir na aposentadoria. Este material nasceu dessas situações: para você entender regras, CNIS, valor do benefício e por que o planejamento faz diferença antes do pedido.</p>
+          <ul class="ebook-list">
+            <li>Conheça as principais regras de aposentadoria</li>
+            <li>Entenda o que pode impactar o <strong style="color:var(--white);font-weight:400">valor</strong> do seu benefício</li>
+            <li>Identifique <strong style="color:var(--white);font-weight:400">erros no CNIS</strong> que podem prejudicar sua aposentadoria</li>
+            <li>Descubra por que o Planejamento Previdenciário pode fazer a diferença</li>
+          </ul>
+          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Gostaria+de+adquirir+o+eBook+Ser%C3%A1+que+eu+vou+me+aposentar%3F&type=phone_number&app_absent=0">Comprar pelo WhatsApp</a>
+          <p class="ebook-note">O guia não substitui uma análise previdenciária individualizada. No INSS, detalhes do histórico fazem diferença.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Perguntas <em class="grad-text" style="font-style:italic">frequentes</em></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Quando devo pensar em planejamento previdenciário?</summary>
+          <p>O ideal é antes de protocolar o pedido no INSS — e, sempre que possível, com antecedência. Organizar o histórico, corrigir inconsistências e entender as regras aplicáveis muda o resultado.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quais documentos costumam ser necessários?</summary>
+          <p>Em geral, o extrato do CNIS, documentos pessoais e comprovantes de vínculos e contribuições. Após o primeiro contato, indico o que faz sentido no seu caso.</p>
+        </details>
+        <details class="faq-item">
+          <summary>O atendimento pode ser pelo WhatsApp?</summary>
+          <p>Sim. O canal principal é o WhatsApp (31) 9 8864-8482. Também é possível escrever para contato@cyntiaalmeidaprev.adv.br.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Você analisa benefícios já concedidos?</summary>
+          <p>Sim. A análise do histórico contributivo também serve para identificar inconsistências em benefícios já concedidos e avaliar se há espaço para revisão.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como compro o eBook “Será que eu vou me aposentar?”</summary>
+          <p>Pelo WhatsApp. Toque em “Comprar pelo WhatsApp” na seção do eBook ou envie mensagem para (31) 9 8864-8482 pedindo o guia. É um material prático, sem juridiquês, sobre regras, CNIS, valor do benefício e planejamento previdenciário.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section id="contato">
     <div class="container">
       <div class="contato-wrap">
-
-        <div class="contato-info reveal">
-          <p class="section-label">Entre em contato</p>
-          <h2 class="contato-title">
-            Não sabe por<br />
-            onde <em class="grad-text italic">começar?</em>
-          </h2>
-          <p class="contato-sub">
-            A primeira consulta é gratuita e sem compromisso. Estou aqui para ouvir você, entender sua situação e orientar da melhor forma possível — no Brasil ou no exterior.
-          </p>
-
-          <div class="contato-canais">
-            <a href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="canal-item">
-              <div class="canal-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <span class="canal-label">WhatsApp</span>
-                <span class="canal-value">(31) 98864-8482</span>
-              </div>
+        <div class="reveal">
+          <p class="section-label">Contato</p>
+          <h2 class="section-title">Não sabe por<br />onde <em class="grad-text" style="font-style:italic">começar?</em></h2>
+          <p class="contato-sub">Planejamento Previdenciário e Benefícios do INSS. Fale pelo canal que preferir. A primeira conversa serve para entender o seu momento e indicar o caminho mais adequado.</p>
+          <div class="canais">
+            <a class="canal" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0">
+              <div class="canal-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+              <div><span class="canal-label">WhatsApp</span><span class="canal-value">(31) 9 8864-8482</span></div>
             </a>
-
-            <a href="mailto:contato@cynthiaalmeida.adv.br" class="canal-item">
-              <div class="canal-icon">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <span class="canal-label">E-mail</span>
-                <span class="canal-value">contato@cyntia.adv.br</span>
-              </div>
+            <a class="canal" href="mailto:contato@cyntiaalmeidaprev.adv.br">
+              <div class="canal-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><span class="canal-label">E-mail</span><span class="canal-value">contato@cyntiaalmeidaprev.adv.br</span></div>
             </a>
-
-            <a href="https://maps.app.goo.gl/hWLtxGCYEW7L1xA27" target="_blank" rel="noopener" class="canal-item">
-              <div class="canal-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <span class="canal-label">Localização</span>
-                <span class="canal-value">Ver no Google Maps</span>
-              </div>
+            <a class="canal" target="_blank" rel="noopener" href="https://instagram.com/planejamentoprevidenciario_br">
+              <div class="canal-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+              <div><span class="canal-label">Instagram</span><span class="canal-value">@planejamentoprevidenciario_br</span></div>
             </a>
-
-            <a href="https://tr.ee/8JPKgoyVB7" target="_blank" rel="noopener" class="canal-item">
-              <div class="canal-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              </div>
-              <div>
-                <span class="canal-label">Redes Sociais</span>
-                <span class="canal-value">Instagram · Facebook · LinkedIn</span>
-              </div>
+            <a class="canal" target="_blank" rel="noopener" href="https://maps.app.goo.gl/hWLtxGCYEW7L1xA27">
+              <div class="canal-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><span class="canal-label">Localização</span><span class="canal-value">Ver no Google Maps</span></div>
             </a>
           </div>
         </div>
 
-        <div class="contato-form reveal reveal-delay-1">
+        <form class="contato-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
           <h3 class="form-title">Envie uma mensagem</h3>
-          <p class="form-subtitle">Respondemos em até 24 horas úteis.</p>
-
-          <form id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
-              </div>
-              <div class="form-group">
-                <label for="whatsapp">WhatsApp</label>
-                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
-              </div>
-            </div>
-
+          <p class="form-subtitle">A conversa segue pelo WhatsApp, com sigilo profissional.</p>
+          <div class="form-row">
             <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
             </div>
-
             <div class="form-group">
-              <label for="servico">Assunto</label>
-              <select id="servico" name="servico" required>
-                <option value="" disabled selected>Selecione o serviço de interesse</option>
-                <option>Aposentadoria por Tempo de Contribuição</option>
-                <option>Aposentadoria por Invalidez</option>
-                <option>Pensão por Morte</option>
-                <option>Auxílio por Incapacidade</option>
-                <option>Revisão de Benefício</option>
-                <option>Planejamento Previdenciário</option>
-                <option>Outro assunto</option>
-              </select>
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
             </div>
-
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente sua situação..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-gold form-submit">
-              Enviar mensagem
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-          </form>
-        </div>
-
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="servico">Assunto</label>
+            <select id="servico" name="servico" required>
+              <option value="" disabled selected>Selecione o assunto</option>
+              <option>Planejamento Previdenciário</option>
+              <option>Benefícios do INSS</option>
+              <option>Análise do CNIS</option>
+              <option>Revisão de benefício</option>
+              <option>eBook — Será que eu vou me aposentar?</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente sua situação..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold form-submit">Enviar mensagem</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1672,22 +1190,20 @@
           <img src="public/logo-completa.png" alt="Cyntia Almeida" />
         </a>
         <ul class="footer-links">
+          <li><a href="#atuacao">Atuação</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#processo">Como Funciona</a></li>
+          <li><a href="#ebook">eBook</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">
-          &copy; 2026 Cyntia Almeida. Todos os direitos reservados.
-        </p>
+        <p class="footer-copy">© 2026 Dr.ª Cyntia Almeida. Todos os direitos reservados.</p>
         <div class="footer-social">
           <a href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0" target="_blank" rel="noopener" title="WhatsApp">
             <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </a>
           <a href="https://tr.ee/8JPKgoyVB7" target="_blank" rel="noopener" title="Instagram">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
           <a href="https://tr.ee/47_M71rWei" target="_blank" rel="noopener" title="Facebook">
             <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -1699,26 +1215,21 @@
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </a>
         </div>
-        <p class="footer-oab">OAB/MG · Advocacia Previdenciária</p>
+        <p class="footer-oab">OAB/MG nº 244.755 · Planejamento Previdenciário e Benefícios do INSS</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp FAB -->
-  <a href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="whatsapp-fab" title="Fale pelo WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-    </svg>
+  <a class="whatsapp-fab" title="Fale pelo WhatsApp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=5531988648482&text=Ol%C3%A1%21+Acabei+de+acessar+seu+contato+pelo+link+e+quero+saber+mais+sobre+planejamento+previdenci%C3%A1rio&type=phone_number&app_absent=0">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   </a>
 
   <script>
-    // Nav scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Hamburger / mobile nav
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
     hamburger.addEventListener('click', () => {
@@ -1734,8 +1245,6 @@
       });
     });
 
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1744,24 +1253,8 @@
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        if (window.scrollY >= section.offsetTop - 120) current = section.id;
-      });
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === '#' + current
-          ? 'var(--gold)'
-          : '';
-      });
-    });
-
-    // Phone mask
     const whatsappInput = document.getElementById('whatsapp');
     whatsappInput.addEventListener('input', (e) => {
       let v = e.target.value.replace(/\D/g, '');
@@ -1772,21 +1265,18 @@
       e.target.value = v;
     });
 
-    // Form submit → WhatsApp redirect
     function handleSubmit(e) {
       e.preventDefault();
-      const nome    = document.getElementById('nome').value;
-      const wp      = document.getElementById('whatsapp').value;
+      const nome = document.getElementById('nome').value;
+      const wp = document.getElementById('whatsapp').value;
       const servico = document.getElementById('servico').value;
-      const msg     = document.getElementById('mensagem').value;
-
+      const msg = document.getElementById('mensagem').value;
       const text = encodeURIComponent(
-        `Olá, Cyntia! Meu nome é ${nome}.\n` +
+        `Olá, Dra. Cyntia! Meu nome é ${nome}.\n` +
         `Tenho interesse em: ${servico}.\n` +
         (msg ? `Mensagem: ${msg}\n` : '') +
         `Meu WhatsApp: ${wp}`
       );
-
       window.open(`https://api.whatsapp.com/send/?phone=5531988648482&text=${text}&type=phone_number&app_absent=0`, '_blank');
     }
   </script>
