@@ -1,0 +1,15 @@
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "auth.php">
+  Require all denied
+</Files>
+<Files "ga.php">
+  Require all denied
+</Files>
+<Files "credentials.json">
+  Require all denied
+</Files>
+<Files "password.php">
+  Require all denied
+</Files>
